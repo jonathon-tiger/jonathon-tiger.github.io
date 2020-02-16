@@ -1,0 +1,246 @@
+/* Colour palette
+#2B2D42 - darkblue
+
+#8D99AE - lightblue
+#EDF2F4 - cream
+#EF233C - red
+#D90429 - darkred
+-------------------------*/
+/* Global styles
+-------------------------*/
+/* Box Model Fix */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *::after {
+  box-sizing: inherit;
+}
+/*---------Box Fix------*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+h1, h2 {
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+}
+h1 {
+  font-size: 70px;
+}
+h2 {
+  font-size: 40px;
+  margin-top: 0;
+}
+h3 {
+	margin: 0;
+}
+h4 {
+	margin-bottom: 0;
+}
+a{
+  color: #fff4e6; /* oc-orange-0 (open color) */
+}
+a:hover{
+  text-decoration: none;
+}
+.centre {
+	text-align: center;
+}
+
+.profile-img {
+	animation: pic-spin 10s linear infinite;
+	animation-play-state:paused;
+}
+.profile-img:hover { 
+ 	animation-play-state:running; 
+ } 
+
+@keyframes pic-spin {
+  100%{transform: rotateX(1turn) rotateY(1turn);}
+}
+
+/***********/
+
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
+}
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  overflow: auto;
+}
+caption {
+  clear:both;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.btn {
+	text-decoration: none;
+	background: #ff922b; /* oc-orange-5 (open color) */
+	color: white;
+	padding: 10px;
+	display: inline-block;
+}
+
+
+/* Header and footer
+--------------------------*/
+header, footer{
+  background: #ffa94d; /* oc-orange-4 (open color) */
+  color: #fff9db; /* oc-yellow-0 (open color) */
+}
+/* Header */
+header {
+	padding-top: 50px;
+	position: relative;
+}
+
+header h1, header h2{
+  color: #EDF2F4;
+  margin: 0;
+}
+.download {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+}
+.footer-banner {
+    max-width:100%;
+    height:auto; 
+    position:relative
+    bottom: 0;
+    left: 0;
+    
+}
+.footer-large-cog-img {
+	max-width: 110px;
+	position: relative;
+	top: -130px;
+	left: -134px;
+	animation: spin 10s linear infinite;
+	animation-play-state:running;
+}
+.footer-large-cog-img:hover {
+	animation-play-state:running;
+}
+.footer-small-cog-img {
+	max-width: 80px;
+	position: relative;
+	top: -145px;
+	left: -320px;
+	animation: spin 10s linear infinite;
+	animation-direction: reverse;
+	animation-play-state:running;
+
+}
+.footer-small-cog-img:hover {
+	animation-play-state:running;
+}
+
+@keyframes spin {
+  100%{transform: rotate(1turn);}
+}
+
+
+
+/* Navigation
+--------------------------*/
+nav {
+	text-align: center;
+	background: #ff922b; /* oc-orange-5 (open color) */
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+nav a {
+	display: inline-block;
+	padding: 15px 20px;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-weight: 400;
+}
+
+
+
+
+/* Work Experience
+--------------------------*/
+.work{
+  background: #EDF2F4;
+}
+h3 ~ p {
+	margin: 0;
+}
+.job-description h4:first-of-type {
+	margin-top: 0;
+}
+.job-description p:first-of-type {
+	margin-top: 0;
+}
+
+
+/* Education
+--------------------------*/ 
+.education{
+	background: lightgray;
+}
+
+
+/* Certifications
+--------------------------*/
+.certifications {
+/* 	background-color: red; */
+	background-image: url("../images/toronto.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.background {
+	background: rgba(250, 198, 40, 0.8);
+}
+
+/* Media queries-----------*/
+@media (min-width: 900px) {
+	.col-narrow {
+	width:40%;
+	float: left;
+	/* min-height: 175px; */
+	}
+	.col-wide {
+	  	width: 60%;
+	  	float: left;
+	  	padding-left: 40px;
+	}
+}
+@media (max-width: 899px) {
+	header {
+		text-align: center;
+	}
+	.profile-img {
+		width: 200px;
+	}
+	.footer-large-cog-img{
+		display: none;
+	}
+	.footer-small-cog-img {
+		display: none;
+	}
+	.footer-banner {
+		display: none;
+	}
+}
+
+
+
+
+
+
+

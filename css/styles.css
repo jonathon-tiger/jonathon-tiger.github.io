@@ -47,15 +47,9 @@ a:hover{
 .centre {
 	text-align: center;
 }
-
-.profile-img {
-	animation: pic-spin 10s linear infinite;
-	animation-play-state:paused;
+.icon-background {
+    color: #0e76a8;
 }
-.profile-img:hover { 
- 	animation-play-state:running; 
- } 
-
 @keyframes pic-spin {
   100%{transform: rotateX(1turn) rotateY(1turn);}
 }
@@ -80,10 +74,35 @@ caption {
 }
 .btn {
 	text-decoration: none;
-	background: #ff922b; /* oc-orange-5 (open color) */
+/*	background: #ff922b;  oc-orange-5 (open color) */
+    background: rgba(255,148,0,0.5);
 	color: white;
+    width: 125px;
 	padding: 10px;
+    margin: 4px 10px 4px 5px;
+    border-radius:5px;
+    text-align: left;
+    font-size: .8em;
+    box-shadow: 2px 1px 2px rgb(128,128,128,0.5);
 	display: inline-block;
+}
+.btn:hover {
+    color:chartreuse;
+}
+.btn:active {
+    box-shadow: 0 0 0 white;
+    margin: 6px 10px 2px 10px;
+}
+.btn-panel {
+    width: 130px;
+    background: rgba(241,152,60,0.5); /* #eb8; */
+    padding: 3px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 0 0 white;
+    position: fixed;
+    top: 25px;
+    right: 0px;
 }
 
 
@@ -99,6 +118,25 @@ header {
 	position: relative;
 }
 
+.header-large-cog-img {
+	max-width: 120px;
+	position: relative;
+	top: 20px;
+	left: 20px;
+	animation: spin 10s linear infinite;
+	animation-play-state:running;
+}
+
+.header-small-cog-img {
+	max-width: 94px;
+	position: relative;
+	top: 33px;
+	left:-1px;
+	animation: spin 10s linear infinite;
+    animation-direction: reverse;
+	animation-play-state:running;
+}
+    
 header h1, header h2{
   color: #EDF2F4;
   margin: 0;
@@ -150,8 +188,6 @@ footer {
   100%{transform: rotate(1turn);}
 }
 
-
-
 /* Navigation
 --------------------------*/
 nav {
@@ -169,7 +205,10 @@ nav a {
 	font-weight: 400;
 }
 
-
+.btn_col {
+    width:10%;
+	float: left;
+}
 
 
 /* Work Experience
@@ -208,7 +247,7 @@ h3 ~ p {
 }
 
 /* Media queries-----------*/
-@media (min-width: 900px) {
+@media (min-width: 1080px) {
 	.col-narrow {
 	width:40%;
 	float: left;
@@ -220,7 +259,7 @@ h3 ~ p {
 	  	padding-left: 40px;
 	}
 }
-@media (max-width: 899px) {
+@media (max-width: 1079px) {
 	header {
 		text-align: center;
 	}

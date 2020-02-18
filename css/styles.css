@@ -1,6 +1,17 @@
-/* Colour palette
-#2B2D42 - darkblue
+/* New colour palette 
+#0F4C81 - classicblue
+#51CBB4 - aqua
+#5679B5 - provence
+#A4B9CC - babyblue
+#687274 - monument
+#F0D5A1 - cornhusk
+#EDF2F4 - cream
+#30FF07 - neongreen
+#1FF0F1 - cyan
+#ffffff - white
 
+Old Colour palette
+#2B2D42 - darkblue
 #8D99AE - lightblue
 #EDF2F4 - cream
 #EF233C - red
@@ -50,9 +61,13 @@ a:hover{
 .icon-background {
     color: #0e76a8;
 }
+.hide-panel {
+    display: none;
+}
 @keyframes pic-spin {
   100%{transform: rotateX(1turn) rotateY(1turn);}
 }
+
 
 /***********/
 
@@ -74,8 +89,7 @@ caption {
 }
 .btn {
 	text-decoration: none;
-/*	background: #ff922b;  oc-orange-5 (open color) */
-    background: rgba(255,148,0,0.5);
+	background: #5679B5;  /* Provence */
 	color: white;
     width: 125px;
 	padding: 10px;
@@ -87,16 +101,16 @@ caption {
 	display: inline-block;
 }
 .btn:hover {
-    color:#30FF07;
-    box-shadow: -2px 1px 2px 1px rgba(76,252,2,0.6);
+    color:#1FF0F1; /* Cyan */
+    box-shadow: -2px 1px 2px 1px #1FF0F1; /* Cyan */
 }
 .btn:active {
-    box-shadow: 2px 1px 2px rgb(128,128,128,0.5);
+    box-shadow: 2px 1px 2px rgb(128,128,128,1);
     margin: 6px 10px 2px 10px;
 }
 .btn-panel {
     width: 130px;
-    background: rgba(241,152,60,0.5); /* #eb8; */
+    background: rgba(179,198,214,0.5); /* Baby Blue */
     padding: 3px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -110,8 +124,8 @@ caption {
 /* Header and footer
 --------------------------*/
 header, footer{
-  background: #ffa94d; /* oc-orange-4 (open color) */
-  color: #fff9db; /* oc-yellow-0 (open color) */
+  background: #0F4C81; /* Classic Blue */
+  color: #F0D5A1; /* Cornhusk */
 }
 /* Header */
 header {
@@ -215,7 +229,7 @@ nav a {
 /* Work Experience
 --------------------------*/
 .work{
-  background: #EDF2F4;
+  background: #EDF2F4; /* Cream */
 }
 h3 ~ p {
 	margin: 0;
@@ -231,28 +245,36 @@ h3 ~ p {
 /* Education
 --------------------------*/ 
 .education{
-	background: lightgray;
+   background-color: white;
 }
-
 
 /* Certifications
 --------------------------*/
 .certifications {
-/* 	background-color: red; */
 	background-image: url("../images/toronto.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
 .background {
-	background: rgba(250, 198, 40, 0.8);
+    background-color: rgba(179, 198, 214,0.85);
 }
-
+.contrast {filter: contrast(110%);}
+.blur {filter: blur(1px);}
 /* Media queries-----------*/
 @media (min-width: 1080px) {
 	.col-narrow {
 	width:40%;
 	float: left;
 	/* min-height: 175px; */
+	}
+    .profile-img {
+		width: 340px;
+        background-color: 0F4C81;
+        
+        border-radius: 170px;
+        padding:1px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+        
 	}
 	.col-wide {
 	  	width: 60%;

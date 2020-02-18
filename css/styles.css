@@ -229,7 +229,7 @@ nav a {
 /* Work Experience
 --------------------------*/
 .work{
-  background: #51CBB4; /* Cream */
+  background: #ffffff; /* White */
 }
 h3 ~ p {
 	margin: 0;
@@ -245,7 +245,7 @@ h3 ~ p {
 /* Education
 --------------------------*/ 
 .education{
-   background-color: white;
+   background-color: #51CBB4; /*Aqua */
 }
 
 /* Certifications

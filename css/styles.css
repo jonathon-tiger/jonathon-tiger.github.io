@@ -197,7 +197,7 @@ a:hover{
     transform: scale(2);
 }
 .portfolio-thumbnail {
-    width:45%
+    width:100%;
 }
 .center {
   display: block;

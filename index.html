@@ -10,22 +10,43 @@
 </head>
 
 <body>
+    <script>
+    document.onreadystatechange = function(){
+     if(document.readyState === 'complete'){
+         myFunction(About);
+     }
+}
+    function myFunction(DivToDisplay) {
+
+        var Tabs=["About", "Work", "Education", "Certifications", "Portfolio"];
+        var divdisp = DivToDisplay;
+        var show = DivToDisplay;
+        var i = 0;
+        while (i < Tabs.length) {
+            divdisp = document.getElementById(Tabs[i]);
+            divdisp.style.display = "none";
+            i++;
+        } 
+        show.style.display = "block";
+    }
+    </script>
+    <div id=Control class="btn-panel">
+        <button onclick="myFunction(About)" class=btn >About</button><br/>
+        <button onclick="myFunction(Work)" class=btn >Work Experience</button><br/>
+        <button onclick="myFunction(Education)" class=btn >Education</button><br/>
+        <button onclick="myFunction(Certifications)" class=btn >Certifications</button><br/>
+        <button onclick="myFunction(Portfolio)" class=btn >Portfolio</button>
+        <a href="Jonathon Hartley Resume.pdf" download="Jonathon-Hartley-Resume.pdf"> 
+                <button class=btn>Resume</button></a> 
+    </div>
+    
     <!-- // Intro -->
-    <header id="about">
-        <nav class="btn-panel">
-            <a href="#about" class=btn>About</a><br/>
-            <a href="#work" class=btn>Work Experience</a><br/>
-            <a href="#education" class=btn>Education</a><br/>
-            <a href="#certification" class=btn>Certifications</a><br/>
-            <a href="#contact" class=btn>Contact</a><br/>
-            <a href="Jonathon Hartley Resume.pdf" class=btn download>Download PDF Resume</a>
-        </nav>
-        
+    <div id="About">
 		<div class="content-wrap">
 			<img class="profile-img col-narrow contrast blur" src="images/jon-at-sea-fg.png" alt="Jonathon Hartley">
 			<div class="col-wide">
-	        	<h1>Jonathon Hartley</h1>
-                <h2>Web Development Guru &nbsp&nbsp
+	        	<h1 style ="color: #F0D5A1">Jonathon Hartley</h1>
+                <h2 style ="color: #F0D5A1">Web Development Guru &nbsp&nbsp
                     <span style="font-size:30px;">
                         <a href="https://www.linkedin.com/in/jon-hartley-508479172/" target="_blank">
                             <span class="fa-stack fa-1x">
@@ -35,20 +56,17 @@
                         </a>
                     </span>
                 </h2>
-                <p class=caption>I've worked in large corporations and owned my own small business. Coding has always held my interest and now I'm enjoying creating great web sites and apps.<br/><br/>
-                <a href="tel:61432484332" class=btn style="text-align:center;">Call me</a> 
-                <a href="mailto:jonathon.hartley@icloud.com" class=btn style="text-align:center;">Email me</a></p>
-                
                 
 			</div>
+            <p class=caption>I've worked for large corporations and owned my own small business. <br/><br/>Coding has always held my interest and now I'm enjoying creating great web sites and apps with the knowledge businesses require.<br/><br/></p>
 		</div>
-    </header>
+    </div>
 
     <main>
         <!-- // Work Experience -->
-        <section id="work" class="work">
+        <section id="Work" class="work">
 			<div class="content-wrap">
-	            <h2>Work Experience</h2>
+	            <h2 class=jh-title>Work Experience</h2>
 	            <!-- Job Details: copy this whole block to add more jobs -->
 					<div class="col-narrow">
 		            	<h3>Web Development Guru</h3>
@@ -79,19 +97,20 @@
 			            <ul>
 			                <li>ICT Consulting & Sales</li>
 			                <li>Excel programming for apps</li>
-			                <li>Swift Application Programming<br/>Example: Roland GR33 Synth Editing app for iMac<br/>
-                            <img src="images/GR33.jpg" width="300" float="right">
+			                <li>Swift Application Programming<br/>Example: Roland GR33 Synth Editing app for iMac<br/><br/>
+                            
                             </li>
 			            </ul>
 			         <!-- end of Job Details block. -->
 					</div>
+                <img src="images/GR33.jpg" class="thumbnail center">
 			</div>
         </section>
 
         <!-- // Education -->
-        <section id="education" class="education">
+        <section id="Education" class="education">
 			<div class="content-wrap">
-	            <h2>Education</h2>
+	            <h2 class=jh-title>Education</h2>
 	            <!-- School details: copy this whole block to add more schools. -->
 	            <div class="col-narrow">
 		            <h3>Adelaide College of TAFE, 2000</h3>
@@ -126,18 +145,8 @@
 					</ul>	
 					
 				</div>
-                <div>
-            <h4>Courses</h4>
-                <ul>
-                    <li>JavaScript Essential Training</li>
-                    <li><strong>jQuery</strong></li>
-                    <ul>
-                        <li>jQuery Essential Training</li>
-                        <li>jQuery for Web Designers</li>
-                        <li>jQuery Data with AJAX</li>
-                        <li>jQuery: UI Widgets</li>
-                    </ul>
-                    <li><strong>Wordpress</strong></li>
+                <div class="col-narrow">
+                    <h4>Courses</h4>
                     <ul>
                         <li>WordPress: Workflows</li>
                         <li>Migrating WordPress with WP Migrate DB and DB Pro</li>
@@ -145,27 +154,34 @@
                         <li>WordPress: Customizing WooCommerce Themes</li>
                         <li>WordPress: Building Progressive Themes with WP Rig</li>
                     </ul>
-                    <li>Learning REST APIs</li>
-                    <li>Creating Web Icons with SVG</li>
-                    <li>PHP with MySQL Essential Training</li>
-                    <li>GitHub for Web Designers</li>
-                </ul>
-            </div>
-			</div>
-            
+                </div>
+                <div class="col-wide job-description" style="margin-top: 40px;">
+                    <ul>
+                        <li>JavaScript Essential Training</li>
+                        <li>jQuery Essential Training</li>
+                        <li>jQuery for Web Designers</li>
+                        <li>jQuery Data with AJAX</li>
+                        <li>jQuery: UI Widgets</li> 
+                        <li>REST APIs</li>
+                        <li>Creating Web Icons with SVG</li>
+                        <li>PHP with MySQL</li>
+                        <li>GitHub for Web Designers</li>
+                    </ul>
+                </div>
+
             <!-- End of school details. -->
         </section>
         
                 <!-- // Courses -->
-        <section id ="certification" class="certifications">
+        <section id ="Certifications" class="certifications">
 	        <div class="background">
 				<div class="content-wrap">
-		            <h2>Certifications</h2>
+		            <h2 class="jh-title">Certifications</h2>
 		            <div class="col-narrow">
                         <h3>Prince2</h3>
                         <ul>
                             <li>Foundation member</li>
-                            <li>Certified Prince2 Practioner (Leader of Prince2 teams)</li>
+                            <li>Certified Prince2 Practioner (Leader)</li>
                         </ul>
 			            <h3>HP</h3>
 			            <ul>
@@ -183,7 +199,7 @@
 						</ul>
 						<h3>Riverbed</h3>
 						<ul>
-							<li>Riverbed Sales Associate (RSA) [101, 105, 106, 107]</li>
+							<li>Riverbed Sales Associate</li>
 							<li>Steelhead</li>
 							<li>Stingray</li>
 							<li>SteelCentral</li>
@@ -229,22 +245,39 @@
 			</div>	
             <!-- End of school details. -->
         </section>
+        <section id ="Portfolio" class="portfolio">
+            <div class="content-wrap">
+                <h2 style="color:#F0D5A1;">A selection of websites I have built</h2>
+                
+                <a href="http://butterfieldhydraulics.com.au/" target="_blank"><img src="images/Butterfield Hydraulics iPhone.png" class="portfolio-thumbnail"></a>
+                
+                <a href="http://www.wato.devskyrack.net/haims/" target="_blank"><img src="images/HAIMS iPhone.png" class="portfolio-thumbnail"></a>
+                
+                <a href="http://www.wato.devskyrack.net/pin/" target="_blank"><img src="images/Pinnacle%20iPhone-t.png" class="portfolio-thumbnail">
+                    
+                <a href="https://www.retrojam.net.au/" target="_blank"><img src="images/Retrojam iPhone.png" class="portfolio-thumbnail">
+                    
+                <a href="http://www.wato.devskyrack.net/wato2/wato_tiger/" target="_blank"><img src="images/WaTo%20Consulting%20iPhone.png" class="portfolio-thumbnail">
+                    
+                    <a href="http://jonathon-tiger.github.io" target="_blank"><img src="images/J-Hartley-iPhone.png" class="portfolio-thumbnail"></a>
+            </div>                      
+        </section>           
+ 
     </main>
 
     <!-- // Footer & contact info -->
-    <footer>
+    <footer id=Footer>
 		<div class="content-wrap">
-	        <h2>Let's Keep in Touch!</h2>
-	        <!-- Social media and contact links. Add or remove any networks. -->
-	        <div id="contact" class="contact-info">
-	            <a href="mailto:jonathon.hartley@icloud.com">Email me</a>
-	            <a href="http://jonathon-tiger.github.io" target="_blank">Jonathon's Website</a>
-	            <a href="https://www.linkedin.com/in/jon-hartley-508479172/" target="_blank">LinkedIn</a>
-	        </div>
-			<p>Copyright 2020 by Jonathon Hartley</p>
-				<div class=footer-banner-container>
-		        </div>
-			</div>
+	        <h2 style="color: #F0D5A1">Let's Keep in Touch!</h2><br/>
+            <a href="tel:61432484332" class=single-btn style="text-align:center;">Call me</a>
+            <a href="mailto:jonathon.hartley@icloud.com" class=single-btn style="text-align:center;">Email me</a>
+		</div>
     </footer>
+    <socket style="height: 25%; background-color:black;">
+        <div style="background-color:black; padding: 10px; text-align:center; color: white;">
+			 <span style="font-size: .8em;">Copyright &copy; 2020 by Jonathon Hartley</span>
+        </div>
+    </socket>
+        
 </body>
 </html>

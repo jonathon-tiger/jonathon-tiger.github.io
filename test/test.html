@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>"Test"</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div id=control>
+            <button onclick="myFunction(About)">About</button>
+            <button onclick="myFunction(Work)">Work Experience</button>
+            <button onclick="myFunction(Education)">Education</button>
+            <button onclick="myFunction(Certifications)">Certifications</button>
+            <button onclick="myFunction(Contact)">Contact</button>
+            <button onclick="myFunction(Download)">Download PDF Resume</button>
+        </div>
+        <div id="About" class="hide-all">
+            About Info
+        </div>
+
+         <div id=Work class="hide-all">
+            Work Info
+        </div>
+
+        <div id=Education class="hide-all">
+            Education Info
+        </div>
+        <div id=Certifications class="hide-all">
+            Certifications Info
+        </div>
+
+         <div id=Contact class="hide-all">
+            Contact Info
+        </div>
+
+        <div id=Download class="hide-all">
+            Download Info
+        </div>
+        <script>
+            function myFunction(DivToDisplay) {
+                
+                var Tabs=["About", "Work", "Education", "Certifications", "Contact", "Download"];
+                var divdisp = DivToDisplay;
+                var i = 0;
+                while (i < Tabs.length) {
+                    divdisp = document.getElementById(Tabs[i]);
+                    divdisp.style.display = "none";
+                    i++;
+                }   
+                DivToDisplay.style.display = "block";
+            }
+        </script>
+    </body
+</html>
+    

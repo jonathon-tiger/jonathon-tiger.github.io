@@ -1,0 +1,56 @@
+#About {
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 5px;
+  background: gold;
+}
+
+#Work {
+  background: skyblue; 
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+#Education {
+  background: yellowgreen; 
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 5px;
+  display: none;
+}
+#Certifications {
+  background: magenta;
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+#Contact {
+  background: pink; 
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+#Download {
+  background: aqua; 
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+.hide-all {
+	display: none;
+}
+
+body {
+  overflow-y: scroll;  
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 5px;
+}

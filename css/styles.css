@@ -190,7 +190,7 @@ a:hover{
     transform: scale(2);
 }
 .portfolio-thumbnail {
-    width:33%
+    width:45%
 }
 .center {
   display: block;
@@ -365,7 +365,7 @@ h3 ~ p {
 #Portfolio {
     padding: 0px;
     height: 75%;
-    background-color: #000;
+    background-color: #fdf5e8;
     }
 
 /* Media queries-----------*/
@@ -393,8 +393,6 @@ h3 ~ p {
 		width: 200px;
 	}
 }
-
-
 
 
 

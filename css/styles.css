@@ -44,6 +44,11 @@ footer {
 background-color: #5679B5;
 padding: 0px;
 }
+table, td {
+  border:5px solid #F0D5A1;
+  border-collapse: collapse;
+  z-index: :999;
+}
 .fab {
     color: white;
 }
@@ -190,7 +195,7 @@ a:hover{
     transform: scale(2);
 }
 .portfolio-thumbnail {
-    width:45%
+    width:100%
 }
 .center {
   display: block;

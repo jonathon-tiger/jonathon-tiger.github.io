@@ -11,25 +11,29 @@
 
 <body>
     <script>
-    document.onreadystatechange = function(){
-     if(document.readyState === 'complete'){
-         myFunction(About);
-     }
-}
-    function myFunction(DivToDisplay) {
 
-        var Tabs=["About", "Work", "Education", "Certifications", "Portfolio"];
-        var divdisp = DivToDisplay;
-        var show = DivToDisplay;
-        var i = 0;
-        while (i < Tabs.length) {
-            divdisp = document.getElementById(Tabs[i]);
-            divdisp.style.display = "none";
-            i++;
-        } 
-        show.style.display = "block";
-    }
-    </script>
+		document.onreadystatechange = function(){
+		 if(document.readyState === 'complete'){
+			 myFunction(About);
+		 }
+		}
+		
+		function myFunction(DivToDisplay) {
+			var Tabs=["About", "Work", "Education", "Certifications", "Portfolio"];
+			var divdisp;
+
+			var i;
+			for(i=0; i<5; i++) {
+				divdisp = document.getElementById(Tabs[i]);
+				divdisp.style.display="none";
+			}     
+			DivToDisplay.style.display = "block";
+			window.scrollTo(0, 0);
+		}
+		
+	</script>
+	
+	
     <div id=Control class="btn-panel">
         <button onclick="myFunction(About)" class=btn >About</button><br/>
         <button onclick="myFunction(Work)" class=btn >Work Experience</button><br/>
@@ -37,11 +41,11 @@
         <button onclick="myFunction(Certifications)" class=btn >Certifications</button><br/>
         <button onclick="myFunction(Portfolio)" class=btn >Website Portfolio</button>
         <a href="Jonathon Hartley Resume.pdf" download="Jonathon-Hartley-Resume.pdf"> 
-                <button class=btn>Resume</button></a> 
+        <button class=btn>Resume</button></a> 
     </div>
     
     <!-- // Intro -->
-    <div id="About">
+    <div id="About" class="slide">
 		<div class="content-wrap">
 			<img class="profile-img col-narrow contrast blur" src="images/jon-at-sea-fg.png" alt="Jonathon Hartley">
 			<div class="col-wide">
@@ -64,7 +68,7 @@
 
     <main>
         <!-- // Work Experience -->
-        <section id="Work" class="work">
+        <section id="Work" class="work hide slide">
 			<div class="content-wrap">
 	            <h2 class=jh-title>Work Experience</h2>
 	            <!-- Job Details: copy this whole block to add more jobs -->
@@ -108,7 +112,7 @@
         </section>
 
         <!-- // Education -->
-        <section id="Education" class="education">
+        <section id="Education" class="education hide slide">
 			<div class="content-wrap">
 	            <h2 class=jh-title>Education</h2>
 	            <!-- School details: copy this whole block to add more schools. -->
@@ -173,7 +177,7 @@
         </section>
         
                 <!-- // Courses -->
-        <section id ="Certifications" class="certifications">
+        <section id ="Certifications" class="certifications hide slide">
 	        <div class="background">
 				<div class="content-wrap">
 		            <h2 class="jh-title">Certifications</h2>
@@ -245,7 +249,7 @@
 			</div>	
             <!-- End of school details. -->
         </section>
-        <section id ="Portfolio" class="portfolio">
+        <section id ="Portfolio" class="portfolio hide slide">
             <div class="content-wrap">
                 <h2 style="color:#687274;">A selection of my work</h2>
                 <table>

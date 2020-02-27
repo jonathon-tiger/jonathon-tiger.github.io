@@ -51,6 +51,13 @@ table, td {
   border-collapse: collapse;
   z-index: :999;
 }
+.hide {
+	display: none;
+}
+.slide {
+  animation-name: slide;
+  animation-duration: 2s;
+}
 .fab {
     color: white;
 }
@@ -280,6 +287,11 @@ header h1, header h2{
 }
 .footer-small-cog-img:hover {
 	animation-play-state:running;
+}
+
+@keyframes slide {
+	0%   {top: 0px;}
+  100% {top: -3000px;}
 }
 
 @keyframes spin {

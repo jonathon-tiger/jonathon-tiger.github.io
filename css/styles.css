@@ -67,19 +67,25 @@ table, td {
 .fab:hover {
     color: #1FF0F1;
 }
+p {
+	font-size: 2.07vw;
+}
+li {
+	font-size: 2.06vw
+}
 h1, h2 {
   font-family: 'Caveat', cursive;
   font-weight: 400;
 }
 h1 {
-  font-size: 70px;
-  line-height: 70px;
+  font-size: 9vw; 
+/*  line-height: 70px;*/
   text-align: center;
 }
 h2 {
-  font-size: 40px;
+  font-size: 5vw;
   margin-top: 0;
-  line-height: 40px;
+/*  line-height: 40px;*/
   text-align: center;
 }
 .jh-title {
@@ -129,7 +135,7 @@ a:hover{
     text-align:center;
     color: #A4B9CC;
     font-family: Caveat;
-    font-size: 35px;
+    font-size: 4vw;
     line-height: .9;
 }
 .uppercase {
@@ -404,7 +410,7 @@ h3 ~ p {
 
 /* Media queries-----------*/
 
-@media (min-width: 1080px) {
+@media screen and (min-width: 1080px) {
     .col-narrow {
         width:40%;
         float: left;
@@ -420,7 +426,7 @@ h3 ~ p {
     }
 }
 
-@media (max-width: 1079px) {
+@media screen and (max-width: 1079px) {
 	header body {
 		text-align: center;
 	}
@@ -433,7 +439,7 @@ h3 ~ p {
 	    // width: 50%;
 	}
 }
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
 	header body {
 		text-align: center;
 	}

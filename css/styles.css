@@ -68,22 +68,23 @@ table, td {
     color: #1FF0F1;
 }
 p {
-	font-size: 2.07vw;
+	font-size: min(2.07vw,24px);
 }
 li {
-	font-size: 2.06vw
+	font-size: min(2.06vw, 22px);
 }
 h1, h2 {
   font-family: 'Caveat', cursive;
   font-weight: 400;
 }
 h1 {
-  font-size: 9vw; 
+  font-size: min(9vw, 70px); 
+  
 /*  line-height: 70px;*/
   text-align: center;
 }
 h2 {
-  font-size: 5vw;
+  font-size: min(5vw, 50px);
   margin-top: 0;
 /*  line-height: 40px;*/
   text-align: center;
@@ -135,7 +136,7 @@ a:hover{
     text-align:center;
     color: #A4B9CC;
     font-family: Caveat;
-    font-size: 4vw;
+    font-size: min(4vw, 40px);
     line-height: .9;
 }
 .uppercase {
@@ -425,6 +426,7 @@ h3 ~ p {
 		z-index: 999;
     }
 }
+
 
 @media screen and (max-width: 1079px) {
 	header body {
